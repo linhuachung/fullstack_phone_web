@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "ae5e21b6-98f0-4c9f-97ee-babe97c18aa3",
+		"name": "Phone_Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "QuanLyNGuoiDung",
+			"item": [
+				{
+					"name": "ThemNguoiDung",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"taiKhoan\": \"Test1\",\r\n    \"ho\": \"Test1\",\r\n    \"ten\": \"Test1\",\r\n    \"email\": \"Test1@gmail.com\",\r\n    \"gioiTinh\": true,\r\n    \"ngaySinh\": \"2021-01-01\",\r\n    \"diaChi\": \"Test1\",\r\n    \"soDT\": \"1321231\",\r\n    \"matKhau\": \"Test1\",\r\n    \"avatar\": \"\",\r\n    \"loaiKH\": true,\r\n    \"loaiND\": false\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{DOMAIN}}/api/QuanLyNguoiDung/ThemNguoiDung",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"QuanLyNguoiDung",
+								"ThemNguoiDung"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LayDanhSachNguoiDung",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{DOMAIN}}/api/QuanLyNguoiDung/LayDanhSachNguoiDung",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"QuanLyNguoiDung",
+								"LayDanhSachNguoiDung"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ThemNguoiDung Copy 2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"taiKhoan\": \"Test1\",\r\n    \"ho\": \"Test1\",\r\n    \"ten\": \"Test1\",\r\n    \"email\": \"Test1@gmail.com\",\r\n    \"gioiTinh\": true,\r\n    \"ngaySinh\": \"2021-01-01\",\r\n    \"diaChi\": \"Test1\",\r\n    \"soDT\": \"1321231\",\r\n    \"matKhau\": \"Test1\",\r\n    \"avatar\": \"\",\r\n    \"loaiKH\": true,\r\n    \"loaiND\": false\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{DOMAIN}}/api/QuanLyNguoiDung/ThemNguoiDung",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"QuanLyNguoiDung",
+								"ThemNguoiDung"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "DOMAIN",
+			"value": "http://localhost:8000"
+		}
+	]
+}

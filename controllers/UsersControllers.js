@@ -1,10 +1,16 @@
-const { khachhang } = require("../models");
+const { KhachHang } = require("../models");
 
 // Tạo user
 const createUser = (dataUser) => {
-  khachhang.create();
+  return KhachHang.create(dataUser);
+};
+
+// Lấy danh sách user
+const getAllUser = () => {
+  return KhachHang.findAll();
 };
 
 module.exports = {
   createUser,
+  getAllUser,
 };
