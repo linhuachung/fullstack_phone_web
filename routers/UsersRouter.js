@@ -2,9 +2,10 @@ const express = require("express");
 const { RESPONSE_CODE } = require("../constants");
 const bcryptjs = require("bcryptjs");
 const { createUser, getAllUser, deleteUser, updateUser, getUserByTaiKhoan } = require("../controllers/UsersControllers");
+const { authenticate, authorize } = require("../middleware/author.middlewares");
 const UsersRouter = express.Router();
 
-UsersRouter.post("/ThemNguoiDung", async (req, res) => {
+UsersRouter.post("/ThemNguoiDung", authenticate, authorize("1"), async (req, res) => {
   try {
     const {
       taiKhoan,
@@ -20,7 +21,6 @@ UsersRouter.post("/ThemNguoiDung", async (req, res) => {
       loaiKH,
       loaiND,
     } = req.body;
-
     const salt = bcryptjs.genSaltSync();
     const hashPassword = bcryptjs.hashSync(matKhau, salt);
 
